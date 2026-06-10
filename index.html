@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PoliJardín – Tu jardín polinizador en traspatio</title>
+  <link rel="stylesheet" href="css/estilos.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-logo">
+      <img src="img/logo2.jpg" alt="PoliJardín logo" class="nav-logo-img" />
+      <span class="nav-brand">PoliJardín</span>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Menú">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#inicio" class="nav-link">🏠 Inicio</a></li>
+      <li><a href="#catalogo" class="nav-link">🌿 Catálogo</a></li>
+      <li><a href="#cuidados" class="nav-link">💧 Cuidados</a></li>
+      <li><a href="#registro" class="nav-link">📋 Registro</a></li>
+      <li><a href="#galeria" class="nav-link">📸 Galería</a></li>
+      <li><a href="#acerca" class="nav-link">ℹ️ Acerca de</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO / INICIO -->
+  <section class="hero" id="inicio">
+    <div class="hero-content">
+      <div class="logos-row">
+        <img src="img/logo.jpg" alt="Logo PoliJardín principal" class="hero-logo" />
+        <img src="img/logo2.jpg" alt="Logo PoliJardín secundario" class="hero-logo hero-logo-2" />
+      </div>
+      <h1 class="hero-title">PoliJardín</h1>
+      <p class="hero-tagline">Tu jardín polinizador en traspatio 🐝</p>
+      <p class="hero-desc">
+        Construye, cuida y registra tu propio jardín polinizador desde casa.
+        Apoya a abejas, mariposas y al medio ambiente con cada planta que siembres.
+      </p>
+      <div class="hero-btns">
+        <a href="#catalogo" class="btn btn-primary">Ver catálogo 🌸</a>
+        <a href="#registro" class="btn btn-outline">Registrar planta 🌱</a>
+      </div>
+    </div>
+    <div class="hero-wave">
+      <svg viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#f9f6ef"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- STATS BANNER -->
+  <section class="stats-banner">
+    <div class="stat-item">
+      <span class="stat-num" data-target="120">0</span>
+      <span class="stat-label">Plantas registradas</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num" data-target="45">0</span>
+      <span class="stat-label">Jardines activos</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num" data-target="8">0</span>
+      <span class="stat-label">Tipos de polinizadores</span>
+    </div>
+  </section>
+
+  <!-- CATÁLOGO DE PLANTAS -->
+  <section class="section" id="catalogo">
+    <div class="section-header">
+      <span class="section-eyebrow">Flora nativa</span>
+      <h2 class="section-title">Catálogo de Plantas 🌿</h2>
+      <p class="section-desc">Descubre las plantas ideales para atraer polinizadores a tu traspatio.</p>
+    </div>
+
+    <div class="search-bar">
+      <input type="text" id="searchPlanta" placeholder="🔍 Buscar planta..." class="search-input" />
+    </div>
+
+    <div class="cards-grid" id="catalogoGrid">
+
+      <div class="plant-card" data-nombre="girasol">
+        <div class="plant-icon">🌻</div>
+        <div class="plant-body">
+          <span class="plant-tag">Anual</span>
+          <h3 class="plant-name">Girasol</h3>
+          <p class="plant-sci">Helianthus annuus</p>
+          <div class="plant-info">
+            <span>☀️ Sol pleno</span>
+            <span>💧 Moderado</span>
+            <span>🐝 Abejas</span>
+          </div>
+          <button class="btn-ver" onclick="abrirDetalle('girasol')">Ver más</button>
+        </div>
+      </div>
+
+      <div class="plant-card" data-nombre="lavanda">
+        <div class="plant-icon">💜</div>
+        <div class="plant-body">
+          <span class="plant-tag">Perenne</span>
+          <h3 class="plant-name">Lavanda</h3>
+          <p class="plant-sci">Lavandula angustifolia</p>
+          <div class="plant-info">
+            <span>☀️ Sol pleno</span>
+            <span>💧 Bajo</span>
+            <span>🦋 Mariposas</span>
+          </div>
+          <button class="btn-ver" onclick="abrirDetalle('lavanda')">Ver más</button>
+        </div>
+      </div>
+
+      <div class="plant-card" data-nombre="calendula">
+        <div class="plant-icon">🌼</div>
+        <div class="plant-body">
+          <span class="plant-tag">Anual</span>
+          <h3 class="plant-name">Caléndula</h3>
+          <p class="plant-sci">Calendula officinalis</p>
+          <div class="plant-info">
+            <span>⛅ Semi-sombra</span>
+            <span>💧 Moderado</span>
+            <span>🐝 Abejas</span>
+          </div>
+          <button class="btn-ver" onclick="abrirDetalle('calendula')">Ver más</button>
+        </div>
+      </div>
+
+      <div class="plant-card" data-nombre="salvia">
+        <div class="plant-icon">🌺</div>
+        <div class="plant-body">
+          <span class="plant-tag">Perenne</span>
+          <h3 class="plant-name">Salvia</h3>
+          <p class="plant-sci">Salvia officinalis</p>
+          <div class="plant-info">
+            <span>☀️ Sol pleno</span>
+            <span>💧 Bajo</span>
+            <span>🐦 Colibríes</span>
+          </div>
+          <button class="btn-ver" onclick="abrirDetalle('salvia')">Ver más</button>
+        </div>
+      </div>
+
+      <div class="plant-card" data-nombre="cilantro">
+        <div class="plant-icon">🌿</div>
+        <div class="plant-body">
+          <span class="plant-tag">Anual</span>
+          <h3 class="plant-name">Cilantro</h3>
+          <p class="plant-sci">Coriandrum sativum</p>
+          <div class="plant-info">
+            <span>⛅ Semi-sombra</span>
+            <span>💧 Moderado</span>
+            <span>🐝 Abejas</span>
+          </div>
+          <button class="btn-ver" onclick="abrirDetalle('cilantro')">Ver más</button>
+        </div>
+      </div>
+
+      <div class="plant-card" data-nombre="romero">
+        <div class="plant-icon">🌱</div>
+        <div class="plant-body">
+          <span class="plant-tag">Perenne</span>
+          <h3 class="plant-name">Romero</h3>
+          <p class="plant-sci">Salvia rosmarinus</p>
+          <div class="plant-info">
+            <span>☀️ Sol pleno</span>
+            <span>💧 Bajo</span>
+            <span>🦋 Mariposas</span>
+          </div>
+          <button class="btn-ver" onclick="abrirDetalle('romero')">Ver más</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- MODAL DETALLE PLANTA -->
+  <div class="modal-overlay" id="modalOverlay" onclick="cerrarModal()">
+    <div class="modal-card" onclick="event.stopPropagation()">
+      <button class="modal-close" onclick="cerrarModal()">✕</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <!-- RECOMENDACIONES DE CUIDADO -->
+  <section class="section section-alt" id="cuidados">
+    <div class="section-header">
+      <span class="section-eyebrow">Guía práctica</span>
+      <h2 class="section-title">Recomendaciones de Cuidado 💧</h2>
+      <p class="section-desc">Mantén tu jardín sano y atractivo para los polinizadores.</p>
+    </div>
+
+    <div class="cuidados-list">
+
+      <div class="cuidado-item" data-tipo="riego">
+        <div class="cuidado-icon">💧</div>
+        <div class="cuidado-body">
+          <h3>Riego adecuado</h3>
+          <p>Riega en las mañanas para evitar la evaporación. La mayoría de plantas polinizadoras prefieren riego moderado; evita encharcar la raíz.</p>
+        </div>
+      </div>
+
+      <div class="cuidado-item" data-tipo="poda">
+        <div class="cuidado-icon">✂️</div>
+        <div class="cuidado-body">
+          <h3>Poda y limpieza</h3>
+          <p>Retira flores marchitas para estimular nueva floración. Poda ligeramente después de la temporada de floración principal.</p>
+        </div>
+      </div>
+
+      <div class="cuidado-item" data-tipo="suelo">
+        <div class="cuidado-icon">🪱</div>
+        <div class="cuidado-body">
+          <h3>Suelo y abono</h3>
+          <p>Usa composta orgánica 2 veces al año. Un suelo bien drenado y con materia orgánica favorece el crecimiento y atrae más polinizadores.</p>
+        </div>
+      </div>
+
+      <div class="cuidado-item" data-tipo="plagas">
+        <div class="cuidado-icon">🐛</div>
+        <div class="cuidado-body">
+          <h3>Control de plagas</h3>
+          <p>Prefiere métodos naturales: agua jabonosa, ajo o nim. Evita pesticidas químicos que dañan a los polinizadores que quieres atraer.</p>
+        </div>
+      </div>
+
+      <div class="cuidado-item" data-tipo="luz">
+        <div class="cuidado-icon">☀️</div>
+        <div class="cuidado-body">
+          <h3>Luz solar</h3>
+          <p>Coloca las plantas según sus necesidades. La mayoría de flores para polinizadores necesitan al menos 6 horas de sol directo al día.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- REGISTRO DE PLANTAS -->
+  <section class="section" id="registro">
+    <div class="section-header">
+      <span class="section-eyebrow">Tu jardín</span>
+      <h2 class="section-title">Registro de Plantas 📋</h2>
+      <p class="section-desc">Lleva el control de las plantas en tu jardín polinizador.</p>
+    </div>
+
+    <div class="registro-form-card">
+      <h3 class="form-title">➕ Agregar planta al jardín</h3>
+
+      <div class="form-group">
+        <label class="form-label">Nombre del jardín</label>
+        <input type="text" class="form-input" id="reg_jardin" placeholder="Ej: Jardín trasero" />
+      </div>
+      <div class="form-group">
+        <label class="form-label">Planta</label>
+        <select class="form-input" id="reg_planta">
+          <option value="">Selecciona una planta</option>
+          <option>Girasol</option>
+          <option>Lavanda</option>
+          <option>Caléndula</option>
+          <option>Salvia</option>
+          <option>Cilantro</option>
+          <option>Romero</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Fecha de siembra</label>
+        <input type="date" class="form-input" id="reg_fecha" />
+      </div>
+      <div class="form-group">
+        <label class="form-label">Cantidad</label>
+        <input type="number" class="form-input" id="reg_cantidad" min="1" value="1" />
+      </div>
+      <div class="form-group">
+        <label class="form-label">Estado</label>
+        <select class="form-input" id="reg_estado">
+          <option>Recién sembrada</option>
+          <option>En crecimiento</option>
+          <option>Floreciendo</option>
+          <option>En mantenimiento</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Observaciones</label>
+        <textarea class="form-input form-textarea" id="reg_obs" placeholder="Notas adicionales..."></textarea>
+      </div>
+
+      <button class="btn btn-primary btn-full" onclick="registrarPlanta()">Guardar registro 🌱</button>
+    </div>
+
+    <!-- Lista de registros -->
+    <div class="registros-lista" id="registrosLista"></div>
+  </section>
+
+  <!-- GALERÍA -->
+  <section class="section section-alt" id="galeria">
+    <div class="section-header">
+      <span class="section-eyebrow">Inspiración</span>
+      <h2 class="section-title">Galería 📸</h2>
+      <p class="section-desc">Jardines polinizadores de nuestra comunidad.</p>
+    </div>
+    <div class="galeria-grid">
+      <div class="galeria-item">🌻<span>Jardín de girasoles</span></div>
+      <div class="galeria-item">🌺<span>Flores de temporada</span></div>
+      <div class="galeria-item">🐝<span>Visita de abeja</span></div>
+      <div class="galeria-item">🦋<span>Mariposa monarca</span></div>
+      <div class="galeria-item">🌿<span>Hierbas aromáticas</span></div>
+      <div class="galeria-item">🏡<span>Traspatio en flor</span></div>
+    </div>
+  </section>
+
+  <!-- ACERCA DEL PROYECTO -->
+  <section class="section" id="acerca">
+    <div class="section-header">
+      <span class="section-eyebrow">El proyecto</span>
+      <h2 class="section-title">Acerca de PoliJardín ℹ️</h2>
+    </div>
+    <div class="acerca-card">
+      <div class="acerca-logos">
+        <img src="img/logo.jpg" alt="Logo PoliJardín" class="acerca-logo" />
+        <img src="img/logo2.jpg" alt="Logo PoliJardín alt" class="acerca-logo" />
+      </div>
+      <h3>¿Qué es PoliJardín?</h3>
+      <p>
+        PoliJardín es una aplicación web móvil diseñada para informar, guiar y organizar
+        la construcción y el mantenimiento de <strong>jardines polinizadores en traspatio</strong>.
+      </p>
+      <h3>¿Por qué es importante?</h3>
+      <p>
+        Los polinizadores como abejas y mariposas son fundamentales para el ecosistema.
+        Con PoliJardín puedes contribuir a su conservación desde tu propio hogar,
+        construyendo un espacio verde lleno de vida.
+      </p>
+      <h3>¿Qué puedes hacer aquí?</h3>
+      <ul class="acerca-list">
+        <li>🌿 Explorar el catálogo de plantas polinizadoras</li>
+        <li>📋 Registrar y dar seguimiento a tu jardín</li>
+        <li>💧 Consultar guías de cuidado</li>
+        <li>🐝 Registrar observaciones de polinizadores</li>
+        <li>📸 Ver galería de jardines de la comunidad</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <img src="img/logo2.jpg" alt="Logo" class="footer-logo" />
+    <p class="footer-brand">PoliJardín</p>
+    <p class="footer-sub">Tu jardín polinizador en traspatio 🐝🌻</p>
+    <p class="footer-credits">Proyecto transversal · Desarrollo de apps móviles · 2025</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
